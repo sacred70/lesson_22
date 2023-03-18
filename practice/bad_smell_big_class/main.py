@@ -34,6 +34,14 @@ class Healer:
 
 
 class Tree:
+    # Дерево
+    def on_fire(self):
+        # нет огоня
+        pass
+    def defense(self):
+        # защита
+        pass
+
 class Trap:
 
     ##
@@ -68,7 +76,7 @@ class Trap:
         pass
 
     def on_fire(self):
-        # нет огоня
+        # горит
         pass
 
     def trap_attack(self):
