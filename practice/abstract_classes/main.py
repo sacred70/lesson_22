@@ -43,6 +43,8 @@ from abc import ABC, abstractmethod
 
 
 class Transport:
+    __abstractmethods__ = None
+
     @abstractmethod
     def start_engine(self):
         pass
