@@ -43,6 +43,9 @@ class Tree:
         pass
 
 class Trap:
+    # Ловушка
+    def attack(self):
+        pass
 
     ##
     # тут представлено поведение четырех различных игровых объектов:
@@ -51,36 +54,8 @@ class Trap:
     # - дерева
     # - ловушки
 
-    def attack(self):
-        pass
 
-    def defense(self):
-        # защита
-        pass
 
-    def move(self):
-        # двигаться
-        pass
-
-    def healer_defense(self):
-        pass
-
-    def healer_move(self):
-        pass
-
-    def heal(self):
-        # лечить
-        pass
-
-    def tree_defense(self):
-        pass
-
-    def on_fire(self):
-        # горит
-        pass
-
-    def trap_attack(self):
-        print("It's a trap!")
 
 if __name__ == '__main__':
     unit = Warrior()
