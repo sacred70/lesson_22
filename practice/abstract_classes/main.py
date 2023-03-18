@@ -40,6 +40,8 @@
 # код должен выполняться не выбрасывая исключений
 from abc import ABC, abstractmethod
 # TODO напишите Ваш код здесь
+
+
 class Transport:
     @abstractmethod
     def start_engine(self):
@@ -91,6 +93,16 @@ class Electroscooter(Transport):
 
     def stop(self):
         print("Торможение об стену прошло успешно")
+
+
+class Person:
+    def use_transport(self, transport: Transport):
+        transport.start_engine()
+        transport.stop_engine()
+        transport.move()
+        transport.stop()
+
+
 # Отрезок кода для самопроверки.
 # Запустите его, после того как выполните задание
 if __name__ == '__main__':
