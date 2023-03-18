@@ -21,6 +21,18 @@ class Warrior:
         # двигаться
         pass
 class Healer:
+    # Лекарь
+    def move(self):
+        # двигаться
+        pass
+    def heal(self):
+        # лечить
+        pass
+    def defense(self):
+        # защита
+        pass
+
+
 class Tree:
 class Trap:
 
