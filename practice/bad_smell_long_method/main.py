@@ -9,17 +9,27 @@
 # по более узким функциям и написать их с нуля
 
 
-csv = """Вася;39\nПетя;26\nВасилий Петрович;9"""
+csv = "Вася;39\nПетя;26\nВасилий Петрович;9"
 
 
 def get_users_list():
+    text = _read(csv)
+    data = _sort(text)
+    return _filter(data)
+
+
+def _read(text=csv):
     # Чтение данных из строки
     data = []
-    for line in csv.split('\n'):
+    for line in text.split('\n'):
         name, age = line.split(';')
         data.append({'name': name, 'age': int(age)})
+    return data
 
+
+def _sort(data=_read()):
     # Сортировка по возрасту по возрастанию
+
     _new_data = []
     used_person = set()
     minimum_age_person = None
@@ -48,8 +58,12 @@ def get_users_list():
                     local_minimum = person
         _new_data.append(local_minimum)
         used_person.add(local_minimum['name'])
+        return _new_data
 
+
+def _filter(_new_data=_sort()):
     # Фильтрация
+    #_new_data = _sort()
     result_data = []
     for person in _new_data:
         if person['age'] < 10:
